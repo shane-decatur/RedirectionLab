@@ -8,6 +8,7 @@ public class MakeStars{
       while (m.hasNext()){
         String str = m.next();
         System.out.print(str);
+        System.out.print(" ");
       }
       System.out.println();
     }
