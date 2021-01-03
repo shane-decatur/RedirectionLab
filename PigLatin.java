@@ -1,3 +1,4 @@
+import java.util.*;
 public class PigLatin{
   public static String pigLatinSimple(String s){
     String first = s.substring(0,1);
@@ -10,7 +11,8 @@ public class PigLatin{
   }
 
   public static String pigLatin(String s){
-    String digraph = s.substring(0,2);
+    String digraph = s.substring(0,1);
+    if (s.length() > 1) digraph = s.substring(0,2);
     if (digraph.equals("bl") || digraph.equals("br")
     || digraph.equals("ch") || digraph.equals("ck") || digraph.equals("cl") || digraph.equals("cr")
     || digraph.equals("dr") || digraph.equals("fl") || digraph.equals("fr")
@@ -41,4 +43,5 @@ public class PigLatin{
     }
   }
 
+  
 }
