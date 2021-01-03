@@ -27,11 +27,4 @@ public class PigLatin{
     }
   }
 
-  public static void main(String[] args){
-    System.out.println(pigLatin("the"));
-    System.out.println(pigLatin("check"));
-    System.out.println(pigLatin("skee"));
-    System.out.println(pigLatin("emu"));
-    System.out.println(pigLatin("grade"));
-  }
 }
