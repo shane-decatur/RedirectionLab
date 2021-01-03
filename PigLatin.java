@@ -3,7 +3,7 @@ public class PigLatin{
   public static String pigLatinSimple(String s){
     String first = s.substring(0,1).toLowerCase();
     if (first.equals("a") || first.equals("e") || first.equals("i") || first.equals("o") || first.equals("u")){
-      return s + "hay";
+      return s.toLowerCase() + "hay";
     }
     else{
       return s.substring(1).toLowerCase() + first + "ay";
@@ -11,7 +11,7 @@ public class PigLatin{
   }
 
   public static String pigLatin(String s){
-    String digraph = s.substring(0,1);
+    String digraph = "";
     if (s.length() > 1) digraph = s.substring(0,2).toLowerCase();
     if (digraph.equals("bl") || digraph.equals("br")
     || digraph.equals("ch") || digraph.equals("ck") || digraph.equals("cl") || digraph.equals("cr")
@@ -22,7 +22,7 @@ public class PigLatin{
     || digraph.equals("sm") || digraph.equals("sn") || digraph.equals("sp") || digraph.equals("st")
     || digraph.equals("th") || digraph.equals("tr") || digraph.equals("tw")
     || digraph.equals("wh") || digraph.equals("wr")){
-      return s.substring(2) + digraph + "ay";
+      return s.substring(2).toLowerCase() + digraph + "ay";
     }
     else{
       return pigLatinSimple(s);
@@ -43,5 +43,15 @@ public class PigLatin{
     }
   }
 
-  
+  public static void main(String[] args){
+    Scanner n = new Scanner(System.in);
+    while (n.hasNextLine()){
+      Scanner m = new Scanner(n.nextLine());
+      while (m.hasNext()){
+        System.out.print(pigLatinBest(m.next()));
+        System.out.print(" ");
+      }
+      System.out.println();
+    }
+  }
 }
