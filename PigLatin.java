@@ -27,4 +27,18 @@ public class PigLatin{
     }
   }
 
+
+  public static String pigLatinBest(String s){
+    char last = s.charAt(s.length()-1);
+    if(!Character.isLetter(s.charAt(0))){
+      return s;
+    }
+    else if (!Character.isLetterOrDigit(last)){
+      return pigLatin(s.substring(0,s.length()-1)) + last;
+    }
+    else{
+      return pigLatin(s);
+    }
+  }
+
 }
